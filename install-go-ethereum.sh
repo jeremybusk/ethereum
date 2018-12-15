@@ -31,6 +31,6 @@ EOF
 mkdir -p /var/lib/${USERNAME}
 groupadd ${USERNAME} 
 useradd --gid ${USERNAME} --home /var/lib/${USERNAME} ${USERNAME} 
-cp -rp /root/${USERNAME} /var/lib/${USERNAME}
+# cp -rp /root/${USERNAME} /var/lib/${USERNAME}
 chown -R ${USERNAME}:${USERNAME} /var/lib/${USERNAME}
 systemctl enable ${USERNAME}.service
