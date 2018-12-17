@@ -9,6 +9,12 @@ USERNAME="my-go-ethereum"
 echo "To start service: systemctl start ${USERNAME}"
 echo "Ethereum data location: /var/lib/${USERNAME}/.ethereum"
 
+sudo apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
 DISTRIB_CODENAME=$(cat /etc/*release | grep '^DISTRIB_CODENAME=' | awk -F= '{print $2}')
 if [ "${DISTRIB_CODENAME}" = "bionic" ] || [ "${DISTRIB_CODENAME}" = "xenial" ] ; then
     echo "Supported host operating system Ubuntu Bionic/Buster 16.04/18.04."
