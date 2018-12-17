@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 ## Quick & simple install using ethereum ppa.
+# bash <(curl -s https://raw.githubusercontent.com/jeremybusk/ethereum/master/test.txt)
+# start systemctl start geth
+# View data in /var/lib/geth/.ethereum
 
 set -exo pipefail
 
