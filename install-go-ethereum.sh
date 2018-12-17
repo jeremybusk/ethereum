@@ -44,4 +44,7 @@ chown ${USERNAME}:${USERNAME} /var/lib/${USERNAME}
 # systemctl enable ${USERNAME}.service
 deb-systemd-helper enable ${USERNAME}.service
 
+echo "To start service: systemctl start ${USERNAME}"
+echo "Data location: /var/lib/${USERNAME}/.ethereum
+
 exit 0
