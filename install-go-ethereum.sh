@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y ethereum
 
-cat > /etc/systemd/system/${USERNAME}.service <<EOF
+cat > /lib/systemd/system/${USERNAME}.service <<EOF
 [Unit]
 Description=Ethereum Go Client
 After=network.target
@@ -41,6 +41,7 @@ mkdir -p /var/lib/${USERNAME}
 useradd --home /var/lib/${USERNAME} ${USERNAME}
 chown ${USERNAME}:${USERNAME} /var/lib/${USERNAME}
 
-systemctl enable ${USERNAME}.service
+# systemctl enable ${USERNAME}.service
+deb-systemd-helper enable ${USERNAME}.service
 
 exit 0
