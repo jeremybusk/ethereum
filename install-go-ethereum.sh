@@ -1,8 +1,8 @@
 #!/bin/sh
 ## Quick & simple install ethereum as service using ethereum ppa for Ubuntu.
 # bash <(curl -s https://raw.githubusercontent.com/jeremybusk/ethereum/master/install-go-ethereum.sh)
-# systemctl start go-ethereum
-# /var/lib/go-ethereum/.ethereum
+# To start service: systemctl start ${USERNAME}"
+# Ethereum data location: /var/lib/${USERNAME}/.ethereum
 
 set -e
 
