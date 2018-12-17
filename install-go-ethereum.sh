@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## Quick & simple install ethereum as service using ethereum ppa for Ubuntu.
 # bash <(curl -s https://raw.githubusercontent.com/jeremybusk/ethereum/master/install-go-ethereum.sh)
 # systemctl start go-ethereum
@@ -9,7 +9,7 @@ set -e
 USERNAME="go-ethereum"
 
 ID=$(cat /etc/*release | grep '^DISTRIB_CODENAME=' | awk -F= '{print $2}')
-if [ "${ID}" = "bionic" ] || [ "${ID}" "xenial" ] ; then
+if [ "${ID}" = "bionic" ] || [ "${ID}" = "xenial" ] ; then
     echo "Supported host operating system Ubuntu Bionic/Buster 16.04/18.04."
 else
     echo "ERROR! Invalid host operating system."
