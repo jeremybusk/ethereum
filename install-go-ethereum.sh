@@ -1,12 +1,13 @@
 #!/bin/sh
 ## Quick & simple install ethereum as service using ethereum ppa for Ubuntu.
 # bash <(curl -s https://raw.githubusercontent.com/jeremybusk/ethereum/master/install-go-ethereum.sh)
-# To start service: systemctl start ${USERNAME}"
-# Ethereum data location: /var/lib/${USERNAME}/.ethereum
 
 set -e
 
 USERNAME="my-go-ethereum"
+
+echo "To start service: systemctl start ${USERNAME}"
+echo "Ethereum data location: /var/lib/${USERNAME}/.ethereum"
 
 DISTRIB_CODENAME=$(cat /etc/*release | grep '^DISTRIB_CODENAME=' | awk -F= '{print $2}')
 if [ "${DISTRIB_CODENAME}" = "bionic" ] || [ "${DISTRIB_CODENAME}" = "xenial" ] ; then
@@ -45,6 +46,6 @@ systemctl enable ${USERNAME}.service
 # deb-systemd-helper enable ${USERNAME}.service
 
 echo "To start service: systemctl start ${USERNAME}"
-echo "Ethereum data location: /var/lib/${USERNAME}/.ethereum
+echo "Ethereum data location: /var/lib/${USERNAME}/.ethereum"
 
 exit 0
