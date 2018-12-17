@@ -41,10 +41,10 @@ mkdir -p /var/lib/${USERNAME}
 useradd --home /var/lib/${USERNAME} ${USERNAME}
 chown ${USERNAME}:${USERNAME} /var/lib/${USERNAME}
 
-# systemctl enable ${USERNAME}.service
-deb-systemd-helper enable ${USERNAME}.service
+systemctl enable ${USERNAME}.service
+# deb-systemd-helper enable ${USERNAME}.service
 
 echo "To start service: systemctl start ${USERNAME}"
-echo "Data location: /var/lib/${USERNAME}/.ethereum
+echo "Ethereum data location: /var/lib/${USERNAME}/.ethereum
 
 exit 0
