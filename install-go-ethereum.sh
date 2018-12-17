@@ -30,7 +30,7 @@ After=network.target
 [Service]
 User=${USERNAME}
 WorkingDirectory=/var/lib/${USERNAME}
-ExecStart=/usr/bin/go-ethereum --ws --rpc --rpcaddr 0.0.0.0 --rpcport 8545 
+ExecStart=/usr/bin/geth --ws --rpc --rpcaddr 0.0.0.0 --rpcport 8545 
 Restart=on-failure
 
 [Install]
