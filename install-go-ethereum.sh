@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 ## Quick & simple install using ethereum ppa.
+## Install via bash <(curl -s https://some-source-text-file)
+## Start via: systemctl start go-ethereum
+## Files are located in /var/lib/go-ethereum/.ethereum
+
 
 set -exo pipefail
 
