@@ -6,10 +6,10 @@
 
 set -e
 
-USERNAME="go-ethereum"
+USERNAME="my-go-ethereum"
 
-ID=$(cat /etc/*release | grep '^DISTRIB_CODENAME=' | awk -F= '{print $2}')
-if [ "${ID}" = "bionic" ] || [ "${ID}" = "xenial" ] ; then
+DISTRIB_CODENAME=$(cat /etc/*release | grep '^DISTRIB_CODENAME=' | awk -F= '{print $2}')
+if [ "${DISTRIB_CODENAME}" = "bionic" ] || [ "${DISTRIB_CODENAME}" = "xenial" ] ; then
     echo "Supported host operating system Ubuntu Bionic/Buster 16.04/18.04."
 else
     echo "ERROR! Invalid host operating system."
