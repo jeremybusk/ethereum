@@ -9,7 +9,7 @@ set -e
 USERNAME="go-ethereum"
 
 ID=$(cat /etc/*release | grep '^DISTRIB_CODENAME=' | awk -F= '{print $2}')
-if [ "${ID}" = "bionic" ] || [ "${ID}" "buster" ] ; then
+if [ "${ID}" = "bionic" ] || [ "${ID}" "xenial" ] ; then
     echo "Supported host operating system Ubuntu Bionic/Buster 16.04/18.04."
 else
     echo "ERROR! Invalid host operating system."
